@@ -156,9 +156,45 @@ img {
 
 /* gallery */
 
+.gallery {
+    padding-bottom: 3rem;
+}
+
 .gallery-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn-wrapper {
+    text-align: center;
+}
+
+.btn-more {
+    display: inline-block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 3.75rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-top: 3rem;
+
+    border-radius: 1.875rem;
+    border: none;
+    background-color: #242795;
+
+    color: #FFF;
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 3.75rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-more:hover {
+    background-color: #3338bc;
 }
 
 /* footer */
@@ -169,7 +205,7 @@ img {
 .svg-git {
     width: 25px;
     height: 25px;
-    fill: #120a8f;
+    fill: #242795;
 }
 
 .footer-copyright {
