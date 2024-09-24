@@ -18,7 +18,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 
     -webkit-font-smoothing: antialiased;
-    background-color: #242b33;
+    background-color: #000;
 
 }
 
@@ -154,6 +154,13 @@ img {
     font-size: 1.1rem;
 }
 
+/* gallery */
+
+.gallery-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 /* footer */
 
 .footer {
@@ -162,7 +169,7 @@ img {
 .svg-git {
     width: 25px;
     height: 25px;
-    fill: #5c42ff;
+    fill: #120a8f;
 }
 
 .footer-copyright {
@@ -178,11 +185,13 @@ img {
 }
 
 .copyright {
-    color: #000;
+    color: #fff;
     font-size: 20px;
 }
 
 .footer-logo {
+    color: #fff;
+    font-size: 20px;
     flex-shrink: 0;
     width: 100px;
     overflow: hidden;
