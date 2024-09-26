@@ -202,6 +202,11 @@ img {
     background-color: #3338bc;
 }
 
+.btn-more.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
 /* footer */
 
 .footer {
