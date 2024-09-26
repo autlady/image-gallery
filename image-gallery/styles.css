@@ -134,6 +134,15 @@ img {
     left: 1.2rem;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.close__icon {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 
