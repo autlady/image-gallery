@@ -1,9 +1,10 @@
 const apiKey = "9Ve6CJPoODdCDtN8iXBM6uePfH1EAB64R7i0aRVhkgc";
 
 const photosWrapper = document.querySelector(".gallery-wrapper");
+const loadMore = document.querySelector(".btn-more");
 
 // const searchForm = document.querySelector(".search__input");
-// const showMore = document.querySelector(".btn-more");
+
 
 // let keyword = "";
 // let page = 1;
@@ -40,4 +41,12 @@ const generateHTML = (photos) => {
         ).join("");
 }
 
+const loadMorePhotos = () => {
+    currentPage++;
+    let apiURL = `https://api.unsplash.com/photos?page=${currentPage}&per_page=${perPage}`;
+    getPhotos(apiURL);
+}
+
 getPhotos(`https://api.unsplash.com/photos?page=${currentPage}&per_page=${perPage}`);
+
+loadMore.addEventListener("click", loadMorePhotos);
