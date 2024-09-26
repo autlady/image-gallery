@@ -40,7 +40,8 @@ const getPhotos = (apiURL) => {
 }
 
 const generateHTML = (photos) => {
-    photosWrapper.innerHTML += photos.map(photo =>
+    const photoResult = photos.results ? photos.results : photos;
+    photosWrapper.innerHTML += photoResult.map(photo =>
         `<div class="card">
         <img src="${photo.urls.regular}" alt="img">
         </div>`
