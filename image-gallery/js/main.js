@@ -73,4 +73,5 @@ searchInput.addEventListener("keyup", loadSearchPhotos);
 // searchBtn.addEventListener("click", loadSearchPhotos);
 deleteBtn.addEventListener("click", function () {
     searchInput.value = "";
+    searchInput.focus();
 })
