@@ -62,7 +62,7 @@ const generateHTML = (photos) => {
     const photoResult = photos.results ? photos.results : photos;
     photosWrapper.innerHTML += photoResult.map(photo =>
         `<div class="card" onclick="showPhoto('${photo.urls.full}')">
-        <img src="${photo.urls.regular}" alt="img">
+        <img src="${photo.urls.regular}" alt="img" loading="lazy">
         </div>`
         ).join("");
 }
