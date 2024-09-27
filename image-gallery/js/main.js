@@ -3,6 +3,7 @@ const apiKey = "9Ve6CJPoODdCDtN8iXBM6uePfH1EAB64R7i0aRVhkgc";
 const photosWrapper = document.querySelector(".gallery-wrapper");
 const loadMore = document.querySelector(".btn-more");
 const searchInput = document.querySelector(".search__input");
+const searchBtn = document.querySelector(".search__icon");
 const deleteBtn = document.querySelector(".close__icon");
 
 window.onload = () => document.querySelector(".search__input").focus();
@@ -52,6 +53,7 @@ const generateHTML = (photos) => {
 const loadMorePhotos = () => {
     currentPage++;
     let apiURL = `https://api.unsplash.com/photos?page=${currentPage}&per_page=${perPage}`;
+    apiURL = searchTerm ? `https://api.unsplash.com/search/photos?page=${currentPage}&per_page=${perPage}&query=${searchTerm}` : apiURL;
     getPhotos(apiURL);
 }
 
@@ -68,6 +70,7 @@ getPhotos(`https://api.unsplash.com/photos?page=${currentPage}&per_page=${perPag
 
 loadMore.addEventListener("click", loadMorePhotos);
 searchInput.addEventListener("keyup", loadSearchPhotos);
+// searchBtn.addEventListener("click", loadSearchPhotos);
 deleteBtn.addEventListener("click", function () {
     searchInput.value = "";
 })
