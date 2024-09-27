@@ -38,7 +38,7 @@ const getPhotos = (apiURL) => {
         generateHTML(data);
         loadMore.innerText = "Load more";
         loadMore.classList.remove("disabled");
-    })
+    }).catch(() => alert("Failed to load photos"));
 }
 
 const generateHTML = (photos) => {
@@ -58,6 +58,7 @@ const loadMorePhotos = () => {
 }
 
 const loadSearchPhotos = (e) => {
+    if(e.target.value === "") return searchTerm = null;
     if(e.key === "Enter") {
         currentPage = 1;
         searchTerm = e.target.value;
