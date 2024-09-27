@@ -7,23 +7,10 @@ const searchBtn = document.querySelector(".search__icon");
 const deleteBtn = document.querySelector(".close__icon");
 const photoWindow = document.querySelector(".photo-window");
 const closeBtn = document.querySelector(".btn-close-preview");
+const message = document.querySelector(".message");
 
 //при открытии приложения курсор находится в поле ввода
 window.onload = () => document.querySelector(".search__input").focus();
-
-
-// let keyword = "";
-// let page = 1;
-
-// async function searchImages() {
-//     keyword = searchBox.nodeValue;
-//     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${apiKey}`;
-
-//     const response = await fetch(url);
-//     const data = await response.json();
-
-//     console.log(data);
-// }
 
 const perPage = 9;
 let currentPage = 1;
@@ -60,6 +47,11 @@ const closePhoto = () => {
 //делаем из полученных фото карточки и добавляем в photosWrapper
 const generateHTML = (photos) => {
     const photoResult = photos.results ? photos.results : photos;
+    console.log(photoResult);
+    if (photoResult.length === 0) {
+        message.classList.add("show");
+        return
+    }
     photosWrapper.innerHTML += photoResult.map(photo =>
         `<div class="card" onclick="showPhoto('${photo.urls.full}')">
         <img src="${photo.urls.regular}" alt="img" loading="lazy">
@@ -76,6 +68,7 @@ const loadMorePhotos = () => {
 }
 
 const loadSearchPhotos = (e) => {
+    message.classList.remove("show");
     if(e.target.value === "") return searchTerm = null;
     if(e.key === "Enter") {
         currentPage = 1;
