@@ -70,7 +70,14 @@ getPhotos(`https://api.unsplash.com/photos?page=${currentPage}&per_page=${perPag
 
 loadMore.addEventListener("click", loadMorePhotos);
 searchInput.addEventListener("keyup", loadSearchPhotos);
-// searchBtn.addEventListener("click", loadSearchPhotos);
+
+searchBtn.addEventListener("click", function () {
+    currentPage = 1;
+    searchTerm = searchInput.value;
+    photosWrapper.innerHTML = "";
+    getPhotos(`https://api.unsplash.com/search/photos?page=${currentPage}&per_page=${perPage}&query=${searchTerm}`);
+});
+
 deleteBtn.addEventListener("click", function () {
     searchInput.value = "";
     searchInput.focus();
