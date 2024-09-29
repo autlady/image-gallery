@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- превью -->
+    <div class="photo-window">
+        <div class="preview-wrapper">
+            <div class="preview-img">
+                <img src="" alt="photo" loading="lazy">
+            </div>
+            <button class="btn-close-preview">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier"> <path d="M16 8L8 16M8.00001 8L16 16" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                    </svg>
+            </button>
+        </div>
+    </div>
+    <!-- header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header__img">
+                <img src="./img/dslr-camera.png" alt="camera">
+            </div>
+            <h1 class="headline">Unsplash Image Gallery</h1>
+            <p class="subtitle">Find free images within a second</p>
+            <div class="search">
+                <div class="search__icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g class="search__button-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.70001 13.2C10.7376 13.2 13.2 10.7375 13.2 7.69995C13.2 4.66239 10.7376 2.19995 7.70001 2.19995C4.66245 2.19995 2.20001 4.66239 2.20001 7.69995C2.20001 10.7375 4.66245 13.2 7.70001 13.2Z"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16.8 18.4L11.2 12" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </div>
+                <input type="text" class="search__input" autocomplete="off" placeholder="What are you looking for?">
+                <div class="close__icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#0F0F0F"/>
+                        </svg>
+                    </div>
+            </div>
+            <p class="header__text">Ex. Spring, Vacation, Internet etc.</p>
+        </div>
+    </header>
+    <main>
+        <!-- gallery -->
+        <section class="gallery">
+            <div class="container">
+                <div class="message">Nothing found... Try again</div>
+                <div class="gallery-wrapper">
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn-more">Load more
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copyright">
+                <div class="footer-social">
+                    <a href="https://github.com/autlady" target="_blank">
+                        <svg class="svg-git">
+                            <use href="./img/svgSprite.svg#svg-git"></use>
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2024 Julia Grigorieva</p>
+                <div class="footer-logo">
+                    <a href="https://rs.school/courses/javascript-ru" target="_blank">RSSchool</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
